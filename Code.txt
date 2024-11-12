@@ -20,14 +20,14 @@ for i = 1:length(x_vals)
     fprintf('x%d = %.4f, y%d = %.4f\n', i, x_vals(i), i, y_vals(i));
 end
 
-% Evaluar la función objetivo en cada par (x, y) encontrado
+% Evaluar la función objetivo
 f_values = double(subs(f, {x, y}, {x_vals, y_vals}));
 
-% Encontrar el valor máximo y mínimo de la función objetivo
+% Valores máximo y mínimo de la función objetivo
 max_value = max(f_values);
 min_value = min(f_values);
 
-% Imprimir los valores extremos de la función objetivo
+% Imprimir
 disp('Valor máximo de f(x, y) usando Lagrange:');
 disp(num2str(max_value, '%.4f'));
 disp('Valor mínimo de f(x, y) usando Lagrange:');
